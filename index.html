@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="options">
+      <h1>QR Code Generator</h1>
+      <input type="text" id="qrText" placeholder="Enter text or URL">
+
+      <div class="color-picker-container">
+        <div class="color-picker">
+          <label>Foreground:</label>
+          <div class="color-box-wrapper">
+            <div id="fgColorBox" class="color-box"></div>
+            <input type="color" id="fgPicker" value="#000000" class="color-input">
+          </div>
+        </div>
+        <div class="color-picker">
+          <label>Background:</label>
+          <div class="color-box-wrapper">
+            <div id="bgColorBox" class="color-box"></div>
+            <input type="color" id="bgPicker" value="#ffffff" class="color-input">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="size-input">
+        <label>Download Size (px):</label>
+        <input type="number" id="sizeInput" min="100" max="1000" value="500">
+      </div>
+
+      <button id="generateBtn">Generate QR</button>
+    </div>
+
+    <div class="preview">
+      <p id="previewText">Preview</p>
+      <div id="qrContainer">
+        <p class="placeholder">Your QR will appear here</p>
+      </div>
+      <button id="downloadBtn">Download QR</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
