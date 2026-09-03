@@ -24,6 +24,15 @@ bgPicker.addEventListener('input', e => {
   bgBox.style.background = bgColor;
 });
 
+// Logo upload
+document.getElementById('logoUpload').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => uploadedLogo = reader.result;
+  reader.readAsDataURL(file);
+});
+
 // Generate preview
 generateBtn.addEventListener('click', () => {
   const qrText = document.getElementById('qrText').value.trim();

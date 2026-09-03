@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QR Code Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJ QR Code Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1 class="main-title">KJ QR Code Generator</h1>
   <div class="container">
     <div class="options">
-      <h1>QR Code Generator</h1>
-      <input type="text" id="qrText" placeholder="Enter text or URL">
+      <h3>Customize your QR Code</h3>
+      <label for="qrText" class="qrText">Text or URL</label>
+      <input type="text" id="qrText" placeholder="Type your text or paste a link here">
 
       <div class="color-picker-container">
         <div class="color-picker">
@@ -28,6 +31,10 @@
         </div>
       </div>
 
+      <div class="upload-logo">
+        <label>Upload Logo (Optional):</label>
+        <input type="file" id="logoUpload" accept="image/*">
+      </div>
 
       <div class="size-input">
         <label>Download Size (px):</label>
@@ -38,13 +45,21 @@
     </div>
 
     <div class="preview">
-      <p id="previewText">Preview</p>
+      <h3 id="previewText">Preview</h3>
       <div id="qrContainer">
         <p class="placeholder">Your QR will appear here</p>
       </div>
-      <button id="downloadBtn">Download QR</button>
+      <button id="downloadBtn">Download QR Code</button>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://kezio.netlify.app" target="_blank">More Tools</a>
+      <span class="footer-separator">·</span>
+      <span>Made by <a href="https://karojunior.netlify.app" target="_blank">Karo Junior</a></span>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
   <script src="script.js"></script>
